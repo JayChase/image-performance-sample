@@ -1,0 +1,13 @@
+<picture>
+  <ng-container *ngFor="let format of formats">
+    <source
+      *ngFor="let breakpoint of breakpoints"
+      srcset="https://res.cloudinary.com/usefuldev-cloudinary/image/upload/w_{{breakpoint[1]}}/f_webp/v1580217403/rainbow-bridge_dr2pyi.jpg"
+      [media]="breakpoint[0]"
+      [type]="'image/' + format"
+    />
+  </ng-container>
+  <img
+    src="https://res.cloudinary.com/usefuldev-cloudinary/image/upload/v1580217403/rainbow-bridge_dr2pyi.jpg"
+    alt="test"
+/></picture>
